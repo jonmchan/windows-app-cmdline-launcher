@@ -7,19 +7,10 @@ New apps installed from the Microsoft Store are nearly impossible to easily laun
 This tool was written to easily launch Microsoft Apps from command line such as for launching apps in different virtual desktops using [vdesk](https://github.com/LittleVaaty/VDesk).
 
 
-Usage:
+## Usage:
 
-.\launch.ps1
-
-```
-.\launch.ps1
-Usage: launch.ps1 ApplicationName|[-list]
-
-  -list     List all applications found in shell:appsFolder
-  ApplicationName     Launch the application
-```
-
-.\launch.ps1 -list
+### List all Applications
+`.\launch.ps1 -list`
 
 ```
  .\launch.ps1 -list
@@ -32,7 +23,9 @@ Solitaire & Casual Games
 ...
 ```
 
-.\launch.ps1 [application]
+### Launch Application
+
+`.\launch.ps1 [application]`
 
 ```
 .\launch.ps1 Slack
@@ -42,10 +35,11 @@ Solitaire & Casual Games
 .\launch.ps1 
 ```
 
+## Launch.bat Helper Script
 
 launch.bat is included as a convenience wrapper script to set the ExecutionPolicy and run launch.ps1. It is useful if your system defaults to not run Powershell scripts.
 
-.\launch.bat -list
+`.\launch.bat -list`
 ```
  .\launch.bat -list
 Windows PowerShell
@@ -63,13 +57,14 @@ Solitaire & Casual Games
 ```
 
 
-Possible future improvements:
+## Possible future improvements:
 
 shell:appsFolder include more than Microsoft Apps pulling apps from the start menu as well. Old apps will fail to launch with the launcher. We can either detect if it is not a Microsoft Store app and hide it from the `.\launch.ps1 -list` output or we can detect if a legacy application is passed and launch it properly. As of right now, old apps will not launch and output `The system cannot find the file specified.`
 
 
-References:
+## References:
 
 - https://learn.microsoft.com/en-us/powershell/module/startlayout/get-startapps?view=windowsserver2022-ps
 - https://learn.microsoft.com/en-us/powershell/module/appx/get-appxpackage?view=windowsserver2022-ps
-- 
+- https://superuser.com/questions/1543363/how-to-open-a-windows-store-app-from-command-line
+- https://answers.microsoft.com/en-us/windows/forum/windows_10-windows_store/starting-windows-10-store-app-from-the-command/836354c5-b5af-4d6c-b414-80e40ed14675
