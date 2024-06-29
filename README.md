@@ -32,12 +32,12 @@ Solitaire & Casual Games
 
 # multiword programs add quotes
 
-.\launch.ps1 
+.\launch.ps1 "Phone Link"
 ```
 
 ## Launch.bat Helper Script
 
-launch.bat is included as a convenience wrapper script to set the ExecutionPolicy and run launch.ps1. It is useful if your system defaults to not run Powershell scripts.
+launch.bat is included as a convenience wrapper script to set the ExecutionPolicy and run `launch.ps1`. It is useful if your system defaults to not run Powershell scripts.
 
 `.\launch.bat -list`
 ```
@@ -59,7 +59,7 @@ Solitaire & Casual Games
 
 ## Possible future improvements:
 
-shell:appsFolder include more than Microsoft Apps pulling apps from the start menu as well. Old apps will fail to launch with the launcher. We can either detect if it is not a Microsoft Store app and hide it from the `.\launch.ps1 -list` output or we can detect if a legacy application is passed and launch it properly. As of right now, old apps will not launch and output `The system cannot find the file specified.`
+`shell:appsFolder` include more than Microsoft Apps pulling apps from the start menu as well. Old apps will fail to launch with the launcher. We can either detect if it is not a Microsoft Store app and hide it from the `.\launch.ps1 -list` output or we can detect if a legacy application is passed and launch it properly. As of right now, old apps will not launch and output `The system cannot find the file specified.`
 
 
 ## References:
