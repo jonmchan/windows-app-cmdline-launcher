@@ -10,7 +10,12 @@ if ($args[0] -ne $null) {
         exit
     }
 
-    Start-Process -FilePath "shell:AppsFolder\$appId"
+    if ($args[1] -eq $null) {
+        Start-Process -FilePath "shell:AppsFolder\$appId" 
+    } else {
+        Start-Process -FilePath "shell:AppsFolder\$appId" $args[1..$args.Length]
+    }
+
     exit
 }
 
